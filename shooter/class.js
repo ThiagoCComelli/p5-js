@@ -25,20 +25,8 @@ class Player{
     }
 
     show(){
-        
-        let angle = Math.atan2(mouseY-this.y, mouseX-this.x);
-
-        translate(width/2-(PLAYER_RADIUS/2),height/2-(PLAYER_RADIUS/2));
-        rotate(angle)
-
-
-        rect(0,0,this.radius,this.radius)
+        ellipse(this.x,this.y,this.radius)
         this.weapon.show()
-
-        
-        //rotate(angle + radians(-90))
-
-        
     }
 }
 
@@ -59,7 +47,11 @@ class Weapon{
     }
 
     show(){
-        rect(0,0,this.radius+20,this.radius/5)
+        let angle = Math.atan2(mouseY-(player.getY), mouseX-(player.getX));
+        translate(player.getX,player.getY);
+        rotate(angle)
+
+        rect(0+(PLAYER_RADIUS/2),0,this.radius,this.radius/5)
     }
 
 }

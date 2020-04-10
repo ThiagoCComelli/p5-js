@@ -32,5 +32,5 @@ var player
 var weapon
 var PLAYER_VELOCITY = 4
 var PLAYER_RADIUS = 25
-var WEAPON_RADIUS = 50
+var WEAPON_RADIUS = 20
 var obj
