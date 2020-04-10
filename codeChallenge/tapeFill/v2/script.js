@@ -18,7 +18,7 @@ class Tape{
 }
 
 function setup(){
-    createCanvas(windowWidth,windowHeight)
+    createCanvas(800,800)
     background(255)
     rectMode(CENTER)
     ellipse(width/2,height/2,width*.9)
