@@ -30,9 +30,21 @@ class Ball{
 
 }
 
+
+
+function Texto(){
+    this.show = function(){
+        textSize(32)
+        textAlign(CENTER)
+        fill(255)
+        strokeWeight(0)
+        text('click and drag',width/2,height/2)
+    }
+}
+
 function setup(){
     createCanvas(680,420)
-
+    texta = new Texto()
 }
 
 
@@ -45,6 +57,8 @@ function mousePressed(){
 
 function draw(){
     background(0)
+
+    texta.show()
     
     if(mouseIsPressed){
         balls[balls.length-1].radius = dist(FIRST_X,FIRST_Y,mouseX,mouseY)*2
@@ -59,3 +73,4 @@ function draw(){
 var balls = []
 var FIRST_X = null
 var FIRST_Y = null
+var texta
